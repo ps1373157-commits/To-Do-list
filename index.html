@@ -1,25 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>To Do List | Shaurya</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="StudyVerse Version 2: One smart hub for Class 11 students with notes, tools, motivation, and AI resources."
+    />
+    <title>StudyVerse v2 | Class 11 Student Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8R+9L4Q6QqTqXh4L7+g6fYf9x5n0vJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-live="polite" aria-label="Loading StudyVerse">
+      <div class="loader-orb"></div>
+      <h2>StudyVerse v2</h2>
+      <p>Preparing your smart study space...</p>
+    </div>
 
-<body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
 
-<div class="container">
-  <h1>My To-Do List ✅</h1>
+    <header class="site-header" id="top">
+      <nav class="navbar container">
+        <a href="#top" class="brand">Study<span>Verse</span></a>
 
-  <div class="input-box">
-    <input type="text" id="taskInput" placeholder="Enter a task...">
-    <button onclick="addTask()">Add</button>
-  </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  <ul id="taskList"></ul>
-</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#notes">Notes</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#motivation">Motivation</a></li>
+          <li><a href="#ai-tools">AI Tools</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<script src="script.js"></script>
-</body>
+    <main>
+      <section class="hero section" id="hero">
+        <div class="container hero-grid reveal">
+          <div class="hero-content">
+            <p class="eyebrow">India's Class 11 Smart Learning Platform</p>
+            <h1>One Smart Hub for Class 11 Students</h1>
+            <p class="hero-text">
+              Version 2 of StudyVerse is faster, cleaner, and more focused — with notes, student tools,
+              motivation, and AI resources designed for high-performing learners.
+            </p>
+            <div class="hero-actions">
+              <a href="#notes" class="btn btn-primary">Explore Notes</a>
+              <a href="#tools" class="btn btn-secondary">Student Tools</a>
+            </div>
+          </div>
+
+          <div class="hero-panel floating">
+            <h3>Today's Focus</h3>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Revise concepts for 2 chapters</li>
+              <li><i class="fa-solid fa-check"></i> Solve a mixed practice set</li>
+              <li><i class="fa-solid fa-check"></i> End with a 15-min formula revision</li>
+            </ul>
+            <div class="streak-badge">
+              <i class="fa-solid fa-fire"></i>
+              <span>7 Day Learning Streak</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="notes">
+        <div class="container">
+          <h2 class="section-title reveal">Subjects Notes</h2>
+          <div class="card-grid notes-grid">
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
+              <h3>Physics</h3>
+              <p>Concept-focused notes and chapter summaries for numerical confidence.</p>
+              <a class="btn btn-small" href="physics.html">View Notes</a>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+              <h3>Chemistry</h3>
+              <p>Inorganic, Organic, and Physical chapters with quick-revision resources.</p>
+              <a class="btn btn-small" href="chemistry.html">View Notes</a>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+              <h3>Maths</h3>
+              <p>Formula-rich chapters, solved examples, and smart revision cards.</p>
+              <a class="btn btn-small" href="maths.html">View Notes</a>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-dna"></i></div>
+              <h3>Biology</h3>
+              <p>Diagram-driven explanations with concise chapter notes and key terms.</p>
+              <a class="btn btn-small" href="biology.html">View Notes</a>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+              <h3>English</h3>
+              <p>Literature and writing practice notes tailored for board exam success.</p>
+              <a class="btn btn-small" href="english.html">View Notes</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tools">
+        <div class="container">
+          <h2 class="section-title reveal">Student Tools</h2>
+
+          <div class="card-grid tools-grid">
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-percent"></i></div>
+              <h3>Percentage Calculator</h3>
+              <p>Instantly calculate your score percentage for tests and practice sets.</p>
+              <button class="btn btn-small" id="openCalculator">Open Calculator</button>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+              <h3>Study Timer</h3>
+              <p>Use focused intervals and boost output with disciplined routines.</p>
+              <button class="btn btn-small">Start Session</button>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-sheet-plastic"></i></div>
+              <h3>Formula Sheet</h3>
+              <p>Access quick formula lists for revision before classes and exams.</p>
+              <button class="btn btn-small">Open Sheet</button>
+            </article>
+
+            <article class="card reveal lift countdown-card">
+              <div class="card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+              <h3>Exam Countdown</h3>
+              <p>Track time left for your next major exam and plan your revision.</p>
+              <div class="countdown" id="countdown">Loading countdown...</div>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>CGPA Calculator</h3>
+              <p>Estimate your academic progress and set higher score targets.</p>
+              <button class="btn btn-small">Calculate CGPA</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="motivation">
+        <div class="container">
+          <h2 class="section-title reveal">Motivation Zone</h2>
+          <div class="card-grid motivation-grid">
+            <article class="quote-card reveal lift">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>Keep going, toppers are made not born.</p>
+            </article>
+            <article class="quote-card reveal lift">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>Small study daily beats panic one night.</p>
+            </article>
+            <article class="quote-card reveal lift">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>Discipline today, success tomorrow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ai-tools">
+        <div class="container">
+          <h2 class="section-title reveal">AI Tools Section</h2>
+          <div class="card-grid ai-grid">
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3>Doubt Solver</h3>
+              <p>Get instant explanations for tricky topics and difficult questions.</p>
+              <button class="btn btn-small">Try Now</button>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
+              <h3>Notes Summarizer</h3>
+              <p>Convert long notes into concise key points for fast revision.</p>
+              <button class="btn btn-small">Summarize</button>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h3>Flashcard Maker</h3>
+              <p>Auto-generate flashcards to improve retention and recall speed.</p>
+              <button class="btn btn-small">Create Cards</button>
+            </article>
+
+            <article class="card reveal lift">
+              <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+              <h3>Essay Helper</h3>
+              <p>Structure high-scoring answers and essays with AI-powered guidance.</p>
+              <button class="btn btn-small">Generate Draft</button>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>About StudyVerse</h3>
+          <p>A modern learning platform crafted to help Class 11 students study smarter every day.</p>
+        </div>
+        <div>
+          <h3>Made for Students</h3>
+          <p>Focused on clarity, consistency, and confidence in every subject.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#ai-tools">AI Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2026 StudyVerse. Made with purpose for learners.</p>
+    </footer>
+
+    <div class="modal" id="calculatorModal" aria-hidden="true" role="dialog" aria-labelledby="calculatorTitle">
+      <div class="modal-content">
+        <button class="close-modal" id="closeCalculator" aria-label="Close calculator">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3 id="calculatorTitle">Percentage Calculator</h3>
+        <p>Enter your marks to calculate percentage instantly.</p>
+
+        <div class="input-group">
+          <label for="obtainedMarks">Obtained Marks</label>
+          <input type="number" id="obtainedMarks" placeholder="e.g. 418" min="0" />
+        </div>
+
+        <div class="input-group">
+          <label for="totalMarks">Total Marks</label>
+          <input type="number" id="totalMarks" placeholder="e.g. 500" min="1" />
+        </div>
+
+        <button class="btn btn-primary full" id="calculateBtn">Calculate Percentage</button>
+        <p class="result" id="percentageResult">Your result will appear here.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
